@@ -1,0 +1,33 @@
+<%- include('./partials/head.ejs') %>
+
+   <%- include('./partials/nav.ejs') %>
+
+<div class="details content">
+    <h2><%= blog.title %></h2>
+    <div class="content">
+        <p><%= blog.body %></p>
+    </div>
+
+    <a class="delete" data-doc="<%= blog._id %>">delete</a>
+
+
+</div>
+
+<script>
+    const thrashcan = document.querySelector('a.delete')
+
+    thrashcan.addEventListener('click', (e)=> {
+        const endpoint = `/blogs/${thrashcan.dataset.doc}`;  
+
+        fetch(endpoint,{method:'DELETE'})
+        .then((response)=>response.json())
+        // .then((data)=> console.log(data))
+        .then((data)=> window.location.href = data.redirect)
+        .catch((err)=>{console.log(err)})
+       
+    })
+</script>
+
+
+
+<%- include('./partials/footer.ejs') %>
