@@ -1,3 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css reset ends */
+
+/* global */
 body {
     background-color: antiquewhite;
+    font-family: 'Playfair Display', serif;
+    max-width: 900px;
+    margin: 0 auto;
+        text-align: center;
+
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+
+/* nav bar */
+.site-title {
+    padding: 1rem;
+}
+
+.site-title a {
+    color:black;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.sub-header {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+
+}
+
+.site-nav a {
+    padding: 1rem;
+    color:black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    
+}
+
+.site-nav a:hover {
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    font-weight: bold;
+    text-shadow: lightgrey;   
+
+}
+
+/* Blogs */
+
+.blogs {
+    text-align: center;
+}
+
+.blogs h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.blogs a {
+    color: black;
+}
+
+.blogs .title{
+    font-size: 1.5rem;
+    padding: .5rem 0rem;
+}
+
+.blogs .title:hover{
+    font-weight: bold;
+}
+
+.blogs .snippet {
+    padding-bottom: .5rem;
+}
+
+/* About us */
+
+.about {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.about p {
+    font-size: 1rem;
+    padding: .5rem 0rem;
+}
+
+/* submit */
+
+.create-blog {
+    font-size: 1.5rem;
+}
+
+.form-flex {
+    display: flex;
+    max-width: 70%;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+
+label {
+    margin: 1rem;
+}
+
+input {
+    border: solid 1px black;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+textarea {
+    max-width: 100%;
+    border: solid 1px black;
+    border-radius: .5rem;
+
+}
+
+.form-flex button {
+    width: 20%;
+    color: black;
+    border: solid 1px black;
+    border-radius: .5rem;
+    padding: .4rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+/* footer */
+footer p {
+    padding-top: 2rem;
 }
